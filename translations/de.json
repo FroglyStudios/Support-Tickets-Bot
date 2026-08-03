@@ -1,0 +1,15 @@
+{
+  "TICKET_CREATED_TITLE": "Ticket Erstellt",
+  "TICKET_CREATED_DESC": "Willkommen in deinem Support-Ticket {user}. Ein Teammitglied wird dir in Kürze helfen.",
+  "TICKET_CLOSED": "Das Ticket wurde von {user} geschlossen.",
+  "MODAL_REASON_TITLE": "Grund für das Ticket",
+  "MODAL_REASON_LABEL": "Bitte beschreibe dein Anliegen",
+  "MODAL_REASON_PLACEHOLDER": "Ich brauche Hilfe bei...",
+  "BUTTON_CLOSE_TICKET": "Ticket schließen",
+  "BUTTON_CLAIM_TICKET": "Ticket übernehmen",
+  "CATEGORY_GENERAL": "Allgemein",
+  "CATEGORY_OTHER": "Andere",
+  "CATEGORY_IMPORTANT": "Wichtig",
+  "DASHBOARD_INFO_REPLY": "Verwalte diesen Bot unter {url}",
+  "NO_PERMISSION": "Du hast keine Berechtigung für diese Aktion."
+}

@@ -1,7 +1,7 @@
 const Database = require('better-sqlite3');
 const path = require('path');
 
-const db = new Database(path.join(__dirname, 'db.sql'));
+const db = new Database(path.join(__dirname, 'database.sqlite'));
 
 db.pragma('journal_mode = WAL');
 
@@ -48,6 +48,7 @@ const initDb = () => {
       status TEXT DEFAULT 'open',
       category_id INTEGER,
       reason TEXT,
+      priority TEXT DEFAULT 'none',
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
     );
 
@@ -122,11 +123,10 @@ const initDb = () => {
   addColumn('guilds', 'log_channel_id', 'TEXT');
   addColumn('guilds', 'moderator_roles', 'TEXT');
   addColumn('guilds', 'enable_feedback', 'INTEGER DEFAULT 1');
-  addColumn('guilds', 'panel_type', "TEXT DEFAULT 'dropdown'");
-
-  // Expand categories table
-  addColumn('categories', 'button_color', "TEXT DEFAULT '1'");
-  addColumn('categories', 'ticket_message', "TEXT DEFAULT 'Please wait for a staff member to assist you.'");
+  addColumn('guilds', 'panel_type', 'TEXT DEFAULT "dropdown"');
+  addColumn('categories', 'button_color', 'TEXT DEFAULT "1"');
+  addColumn('categories', 'ticket_message', 'TEXT DEFAULT "Please wait for a staff member to assist you."');
+  addColumn('tickets', 'priority', 'TEXT DEFAULT "none"');
 };
 
 initDb();
